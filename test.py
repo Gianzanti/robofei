@@ -1,5 +1,5 @@
 import gymnasium as gym
-from stable_baselines3 import SAC, TD3, A2C
+from stable_baselines3 import SAC, TD3, A2C, PPO
 import os
 import argparse
 
@@ -22,6 +22,10 @@ def train(env, sb3_algo):
             )
         case "A2C":
             model = A2C(
+                "MlpPolicy", env, verbose=1, device="cuda", tensorboard_log=log_dir
+            )
+        case "PPO":
+            model = PPO(
                 "MlpPolicy", env, verbose=1, device="cuda", tensorboard_log=log_dir
             )
         case _:
