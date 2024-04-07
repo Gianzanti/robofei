@@ -45,4 +45,8 @@ editar o arquivo gymnasium/envs/mujoco/mujoco_rendering.py (dentro do .venv/lib/
 poetry shell
 ```
 
-Agora é só começar a simular e testar
+9. Executar a rotina de teste
+
+```bash
+python testEnv.py
+```
